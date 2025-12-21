@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HemaDetect - Advanced Blood Cancer Screening</title>
+    <meta name="description" content="Early detection saves lives. AI-powered blood cancer analysis tool.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-heart-pulse"></i> Hema<span>Detect</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#analysis">Analysis</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="btn-primary">Contact Specialist</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container hero-content">
+            <div class="text-content">
+                <span class="badge">AI-Powered Hematology</span>
+                <h1>Early Detection for <br><span>Blood Cancer</span></h1>
+                <p>Fast, accurate, and accessible blood cell analysis using advanced machine learning algorithms. Upload
+                    your microscopic blood sample images for a preliminary screening.</p>
+                <div class="cta-group">
+                    <a href="#analysis" class="btn-primary">Start Analysis <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#how-it-works" class="btn-secondary"><i class="fa-solid fa-play"></i> How it works</a>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>99%</h3>
+                        <p>Accuracy</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Availability</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-content">
+                <div class="floating-card card-1">
+                    <i class="fa-solid fa-dna"></i>
+                    <div>
+                        <h4>Genetic Analysis</h4>
+                        <p>Processing...</p>
+                    </div>
+                </div>
+                <div class="abstract-shape"></div>
+                <!-- Placeholder for a medical/lab image if needed, using CSS for now for abstract feel -->
+                <div class="hero-graphic">
+                    <i class="fa-solid fa-notes-medical main-icon"></i>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <div>
+                        <h4>Result Ready</h4>
+                        <p>No anomalies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="analysis" class="analysis-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enter Blood Data</h2>
+                <p>Please enter the patient's blood test results for preliminary screening.</p>
+            </div>
+
+            <form id="analysis-form" class="analysis-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="wbc">White Blood Cell (WBC) count</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="wbc" placeholder="e.g. 6000" min="0" step="any" required>
+                            <span class="unit">cells/µL</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="hgb">Hemoglobin</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="hgb" placeholder="e.g. 14.5" min="0" step="any" required>
+                            <span class="unit">g/dL</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="platelet">Platelet count</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="platelet" placeholder="e.g. 250000" min="0" step="any" required>
+                            <span class="unit">platelets/µL</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="rbc">RBC count</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="rbc" placeholder="e.g. 4.8" min="0" step="any" required>
+                            <span class="unit">M/µL</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="hct">Hematocrit (HCT)</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="hct" placeholder="e.g. 42" min="0" max="100" step="any" required>
+                            <span class="unit">%</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mcv">Mean Corpuscular Volume (MCV)</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="mcv" placeholder="e.g. 90" min="0" step="any" required>
+                            <span class="unit">fL</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="neutrophil">Neutrophil percentage</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="neutrophil" placeholder="e.g. 60" min="0" max="100" step="any"
+                                required>
+                            <span class="unit">%</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lymphocyte">Lymphocyte percentage</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="lymphocyte" placeholder="e.g. 30" min="0" max="100" step="any"
+                                required>
+                            <span class="unit">%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Analyze Data <i
+                            class="fa-solid fa-microscope"></i></button>
+                </div>
+            </form>
+
+            <div id="result-container" class="preview-container hidden">
+                <div class="status-msg" id="status-msg">Processing data...</div>
+
+                <div class="result-box hidden" id="result-box">
+                    <div class="result-header">
+                        <h4>Analysis Result</h4>
+                        <span class="badge success">Normal Range</span>
+                    </div>
+                    <p>The entered blood parameters appear to be within normal ranges. No immediate indicators of
+                        leukemia detected.</p>
+                    <small>*This is a preliminary algorithm-based screening and does not replace a doctor's
+                        diagnosis.</small>
+                    <div class="action-buttons">
+                        <button class="btn-secondary small"
+                            onclick="document.getElementById('analysis-form').reset(); document.getElementById('result-container').classList.add('hidden');">Analyze
+                            Another</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="features">
+        <div class="container">
+            <div class="feature-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-microscope"></i>
+                </div>
+                <h3>Precision Analysis</h3>
+                <p>Utilizing high-resolution image processing to detect even minor irregularities in cell morphology.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <h3>Expert Verified</h3>
+                <p>Our algorithms are trained on datasets verified by leading oncologists and hematologists.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3>Data Privacy</h3>
+                <p>Your medical data is encrypted and processed with the highest standards of security and privacy.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>HemaDetect</h3>
+                <p>Advancing healthcare through technology.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2024 HemaDetect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
